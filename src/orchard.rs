@@ -77,7 +77,7 @@ mod tests {
         use pasta_curves::{arithmetic::CurveExt, pallas};
 
         assert_eq!(
-            pallas::Point::hash_to_curve("z.cash:Orchard")(b"G").to_bytes(),
+            pallas::Point::unboxed_hash_to_curve("z.cash:Orchard", b"G").to_bytes(),
             ORCHARD_SPENDAUTHSIG_BASEPOINT_BYTES
         );
     }
@@ -89,7 +89,7 @@ mod tests {
         use pasta_curves::{arithmetic::CurveExt, pallas};
 
         assert_eq!(
-            pallas::Point::hash_to_curve("z.cash:Orchard-cv")(b"r").to_bytes(),
+            pallas::Point::unboxed_hash_to_curve("z.cash:Orchard-cv", b"r").to_bytes(),
             ORCHARD_BINDINGSIG_BASEPOINT_BYTES
         );
     }

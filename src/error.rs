@@ -8,18 +8,18 @@
 // - Deirdre Connolly <deirdre@zfnd.org>
 // - Henry de Valence <hdevalence@hdevalence.ca>
 
-use thiserror::Error;
+//use thiserror::Error;
 
 /// An error related to RedJubJub signatures.
-#[derive(Error, Debug, Copy, Clone, Eq, PartialEq)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq)] // Error
 pub enum Error {
     /// The encoding of a signing key was malformed.
-    #[error("Malformed signing key encoding.")]
+    //#[error("Malformed signing key encoding.")]
     MalformedSigningKey,
     /// The encoding of a verification key was malformed.
-    #[error("Malformed verification key encoding.")]
+    //#[error("Malformed verification key encoding.")]
     MalformedVerificationKey,
     /// Signature verification failed.
-    #[error("Invalid signature.")]
+    //#[error("Invalid signature.")]
     InvalidSignature,
 }

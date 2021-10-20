@@ -1,3 +1,5 @@
+#![no_std]
+
 mod error;
 mod hash;
 pub mod orchard;
@@ -43,7 +45,7 @@ pub(crate) mod private {
     }
 
     pub trait Sealed<T: SigType>:
-        Copy + Clone + Default + Eq + PartialEq + std::fmt::Debug
+        Copy + Clone + Default + Eq + PartialEq + core::fmt::Debug
     {
         const H_STAR_PERSONALIZATION: &'static [u8; 16];
         type Scalar: group::ff::PrimeField + SealedScalar;
