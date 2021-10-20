@@ -6,3 +6,11 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+blake2b_simd = { version = "0.5", default-features = false }
+ff = { version = "0.11", default-features = false }
+group = { version = "0.11", default-features = false }
+serde = { version = "1", optional = true, features = ["derive"] }
+rand_core = "0.5"
+thiserror = "1.0"
+
+pasta_curves = { git = "https://github.com/jarys/pasta_curves.git", branch="alloc" }
