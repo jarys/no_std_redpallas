@@ -22,4 +22,4 @@ pasta_curves = { git = "https://github.com/jarys/pasta_curves.git", branch = "al
 thiserror = { version = "1.0", default-features = false, optional = true }
 
 [features]
-std = ["thiserror"]
+std = ["thiserror", "rand_core/std"]
